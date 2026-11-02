@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية | EngMat QC</title>
+<meta name="description" content="سياسة الخصوصية لتطبيق EngMat QC لضبط جودة المواد الهندسية">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14213d;
+    --muted: #4a5a78;
+    --paper: #f6f8fc;
+    --sheet: #ffffff;
+    --rule: #d6deec;
+    --brand: #0054f5;
+    --brand-ink: #ffffff;
+    --tint: #e8efff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6ecf8;
+      --muted: #a3b1cc;
+      --paper: #0e1626;
+      --sheet: #152036;
+      --rule: #2a3a58;
+      --brand: #4d8bff;
+      --brand-ink: #071226;
+      --tint: #1b2b4a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .app { font-weight: 700; font-size: 1rem; color: var(--brand); margin: 0; }
+  .app span { color: var(--muted); font-weight: 500; }
+  h1 { font-size: 2.25rem; line-height: 1.25; margin: 0.5rem 0 0.75rem; letter-spacing: -0.01em; }
+  .lead { font-size: 1.15rem; color: var(--ink); margin: 0 0 0.5rem; max-width: 36rem; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 2.25rem; }
+  .lang {
+    font: inherit; font-size: 0.95rem; font-weight: 500;
+    background: transparent; color: var(--brand);
+    border: 1.5px solid var(--brand); border-radius: 999px;
+    padding: 0.3rem 1rem; cursor: pointer; white-space: nowrap;
+  }
+  .lang:hover { background: var(--tint); }
+  .lang:focus-visible, a:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+
+  /* الجدول الرئيسي بشكل ورقة تقرير جودة */
+  .ledger { background: var(--sheet); border: 1.5px solid var(--ink); margin: 0 0 3rem; }
+  .ledger-head {
+    background: var(--brand); color: var(--brand-ink);
+    padding: 0.7rem 1rem; font-weight: 700; font-size: 1.05rem;
+    display: flex; justify-content: space-between; gap: 1rem;
+  }
+  .ledger-head small { font-weight: 500; opacity: 0.9; }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.97rem; min-width: 34rem; }
+  th, td { text-align: start; vertical-align: top; padding: 0.7rem 1rem; border-top: 1px solid var(--rule); }
+  th { color: var(--muted); font-weight: 500; font-size: 0.88rem; background: var(--tint); border-top: 0; }
+  td:first-child { font-weight: 700; white-space: nowrap; }
+  .local { color: var(--brand); font-weight: 700; }
+
+  section { padding: 1.75rem 0; border-top: 1px solid var(--rule); }
+  h2 { font-size: 1.35rem; line-height: 1.4; margin: 0 0 0.75rem; }
+  h3 { font-size: 1.05rem; margin: 1.25rem 0 0.35rem; }
+  p { margin: 0 0 0.9rem; }
+  ul { margin: 0 0 0.9rem; padding-inline-start: 1.25rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--brand); text-underline-offset: 3px; }
+  .contact { background: var(--sheet); border: 1.5px solid var(--rule); padding: 1rem 1.25rem; margin-top: 0.5rem; }
+  .contact p:last-child { margin-bottom: 0; }
+  [dir="ltr"] { font-family: "IBM Plex Sans Arabic", "Segoe UI", system-ui, sans-serif; }
+  .num { direction: ltr; unicode-bidi: embed; }
+  [hidden] { display: none !important; }
+  @media (max-width: 34rem) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.85rem; }
+    header { flex-direction: column-reverse; }
+    /* على الموبايل كل صف بلوك: البيان وجنبه وجهته، وتحتهم وقت الاستخدام، من غير تمرير أفقي */
+    .ledger-head { flex-direction: column; gap: 0.1rem; }
+    table { min-width: 0; }
+    thead { display: none; }
+    tr { display: grid; grid-template-columns: 1fr auto; column-gap: 0.75rem; row-gap: 0.15rem; padding: 0.8rem 1rem; border-top: 1px solid var(--rule); }
+    tbody tr:first-child { border-top: 0; }
+    td { border: 0; padding: 0; }
+    td:first-child { grid-column: 1; grid-row: 1; white-space: normal; }
+    td:nth-child(3) { grid-column: 2; grid-row: 1; align-self: start; font-size: 0.85rem; font-weight: 700; padding: 0.1rem 0.6rem; border: 1.5px solid currentColor; border-radius: 999px; white-space: nowrap; }
+    td:nth-child(2) { grid-column: 1 / -1; grid-row: 2; color: var(--muted); font-size: 0.92rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== العربية ===================== -->
+<main class="wrap" id="ar" lang="ar" dir="rtl">
+  <header>
+    <div>
+      <p class="app">EngMat QC <span>(سابقاً GeoEngMat QC)</span></p>
+      <h1>سياسة الخصوصية</h1>
+    </div>
+    <button class="lang" type="button" data-to="en" aria-label="Switch to English">English</button>
+  </header>
+  <p class="lead">بيانات اختباراتك وتقاريرك وصورك تُحفظ على جهازك فقط. التطبيق لا يملك حسابات ولا خوادم، ولا يرسل هذه البيانات إلينا. الجهة الخارجية الوحيدة التي تجمع بيانات هي خدمة إعلانات Google AdMob.</p>
+  <p class="meta">آخر تحديث: 2 نوفمبر 2026. المطوّر: محمود رمضان، مصر. معرّف التطبيق: <span class="num">com.ad.qc</span></p>
+
+  <div class="ledger" role="region" aria-label="ملخص البيانات">
+    <div class="ledger-head"><span>باختصار</span><small>ما الذي يستخدمه التطبيق وأين يذهب</small></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th scope="col">البيان أو الصلاحية</th><th scope="col">متى يُستخدم</th><th scope="col">أين يذهب</th></tr></thead>
+        <tbody>
+          <tr><td>نتائج الاختبارات والتقارير</td><td>عند إدخالك البيانات وحفظ التقرير</td><td class="local">جهازك فقط</td></tr>
+          <tr><td>الكاميرا والصور</td><td>عند ضغطك زر التصوير لإضافة صور العينة</td><td class="local">جهازك فقط</td></tr>
+          <tr><td>الموقع (GPS)</td><td>عند ضغطك زر الموقع لختمه على الصور والتقرير</td><td class="local">جهازك فقط</td></tr>
+          <tr><td>الإشعارات</td><td>تذكيرات محلية بمواعيد كسر المكعبات تفعّلها بنفسك</td><td class="local">جهازك فقط</td></tr>
+          <tr><td>المشاركة والنسخ الاحتياطي</td><td>عند اختيارك مشاركة تقرير أو تصدير نسخة</td><td>المكان الذي تختاره أنت</td></tr>
+          <tr><td>الإعلانات</td><td>أثناء استخدام التطبيق</td><td>Google AdMob</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2>البيانات المحفوظة على جهازك</h2>
+    <p>كل ما تدخله في التطبيق يُحفظ في ذاكرة جهازك: قيم الاختبارات، والتقارير المحفوظة، وأسماء المشاريع والعينات، والصور، وإحداثيات الموقع إن أضفتها، وإعداداتك.</p>
+    <p>لا يحتاج التطبيق إلى تسجيل حساب، ولا يرسل هذه البيانات إلى أي خادم تابع لنا أو لغيرنا. نحن لا نستطيع رؤيتها أو الوصول إليها.</p>
+  </section>
+
+  <section>
+    <h2>الصلاحيات التي يطلبها التطبيق</h2>
+    <h3>الكاميرا</h3>
+    <p>تُطلب عندما تضغط زر التصوير داخل التقرير لإضافة صور العينات. الصور تُحفظ على جهازك ضمن التقرير ولا تُرفع إلى أي مكان.</p>
+    <h3>الموقع</h3>
+    <p>يُطلب الموقع فقط عندما تضغط زر تحديد الموقع، لختم الإحداثيات على صور العينة والتقرير. لا يتتبع التطبيق موقعك في الخلفية، ولا يحفظ الموقع إلا داخل التقرير الذي أضفته إليه.</p>
+    <h3>الإشعارات</h3>
+    <p>تُستخدم لتذكيرك بمواعيد كسر المكعبات بعد 7 و28 يوماً من الصب، وذلك إذا فعّلت التذكيرات بنفسك. هذه إشعارات محلية يجدولها جهازك، ولا يوجد خادم يرسلها.</p>
+    <p>يمكنك سحب أي صلاحية في أي وقت من إعدادات جهازك. سيستمر التطبيق في العمل، وتتوقف الميزة المرتبطة بالصلاحية فقط.</p>
+  </section>
+
+  <section>
+    <h2>الإعلانات (Google AdMob)</h2>
+    <p>يعرض التطبيق إعلانات من خدمة Google AdMob. هذه الخدمة قد تجمع معرّف الإعلانات الخاص بجهازك، وعنوان IP، ومعلومات عن الجهاز ونظام التشغيل، وتفاعلك مع الإعلانات، وذلك لعرض الإعلانات وقياس أدائها وتخصيصها.</p>
+    <p>تخضع هذه البيانات لسياسة خصوصية Google. يمكنك قراءة <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">كيف تستخدم Google البيانات في التطبيقات التي تستخدم خدماتها</a>.</p>
+    <p>يمكنك إعادة ضبط معرّف الإعلانات أو حذفه من إعدادات جهازك، من قسم Google ثم الإعلانات.</p>
+  </section>
+
+  <section>
+    <h2>خدمات Google Play</h2>
+    <p>يستخدم التطبيق خدمات Google Play لإبلاغك بتوفر تحديث جديد وتثبيته، ولعرض نافذة تقييم التطبيق. تتم هذه العمليات عبر Google Play مباشرة وتخضع لسياسة خصوصية Google.</p>
+  </section>
+
+  <section>
+    <h2>المشاركة والنسخ الاحتياطي</h2>
+    <p>عندما تختار مشاركة تقرير أو تصدير نسخة احتياطية، يُرسل الملف أو النص إلى التطبيق أو الخدمة التي تختارها أنت، مثل واتساب أو Google Drive أو البريد. بعد ذلك تخضع البيانات لسياسة تلك الخدمة.</p>
+    <p>رمز QR المطبوع على التقارير يحتوي على ملخص التقرير مكتوباً داخل الرمز نفسه، مثل رقم المرجع والتاريخ والنتيجة واسم الاختبار والمشروع. هذه البيانات غير محفوظة على أي خادم.</p>
+    <p>ملف النسخة الاحتياطية ملف نصي غير مشفّر يحتوي على تقاريرك وصورك. احفظه في مكان آمن.</p>
+  </section>
+
+  <section>
+    <h2>حذف بياناتك</h2>
+    <ul>
+      <li>احذف أي تقرير من سجل النتائج داخل التطبيق.</li>
+      <li>امسح كل بيانات التطبيق من إعدادات جهازك، أو احذف التطبيق، فتُحذف كل البيانات المحفوظة عليه.</li>
+      <li>النسخ الاحتياطية التي صدّرتها تبقى في المكان الذي حفظتها فيه، وحذفها بيدك.</li>
+    </ul>
+    <p>لأننا لا نحتفظ بأي بيانات عنك، لا توجد بيانات لدينا نحذفها نيابة عنك. بيانات الإعلانات تديرها Google عبر إعدادات حسابك وجهازك.</p>
+  </section>
+
+  <section>
+    <h2>الأطفال</h2>
+    <p>التطبيق موجّه للمهندسين والفنيين، وليس موجّهاً للأطفال دون 13 عاماً. لا نجمع عن قصد أي بيانات من الأطفال.</p>
+  </section>
+
+  <section>
+    <h2>التغييرات على هذه السياسة</h2>
+    <p>عند تغيير هذه السياسة سنحدّث تاريخ آخر تحديث في أعلى الصفحة. التغييرات المهمة سنذكرها في ملاحظات تحديث التطبيق على Google Play.</p>
+  </section>
+
+  <section>
+    <h2>التواصل</h2>
+    <div class="contact">
+      <p>لأي سؤال عن هذه السياسة أو عن بياناتك:</p>
+      <p>واتساب أو هاتف: <a class="num" href="https://wa.me/201149219701" rel="noopener">+20 114 921 9701</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== English ===================== -->
+<main class="wrap" id="en" lang="en" dir="ltr" hidden>
+  <header>
+    <div>
+      <p class="app">EngMat QC <span>(formerly GeoEngMat QC)</span></p>
+      <h1>Privacy Policy</h1>
+    </div>
+    <button class="lang" type="button" data-to="ar" aria-label="التبديل إلى العربية">العربية</button>
+  </header>
+  <p class="lead">Your test data, reports and photos are stored only on your device. The app has no accounts and no servers, and it does not send this data to us. The only third party that collects data is the Google AdMob advertising service.</p>
+  <p class="meta">Last updated: November 2, 2026. Developer: Mahmoud Ramadan, Egypt. App ID: com.ad.qc</p>
+
+  <div class="ledger" role="region" aria-label="Data summary">
+    <div class="ledger-head"><span>At a glance</span><small>What the app uses and where it goes</small></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th scope="col">Data or permission</th><th scope="col">When it is used</th><th scope="col">Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>Test results and reports</td><td>When you enter data and save a report</td><td class="local">Your device only</td></tr>
+          <tr><td>Camera and photos</td><td>When you tap the camera button to add sample photos</td><td class="local">Your device only</td></tr>
+          <tr><td>Location (GPS)</td><td>When you tap the location button to stamp photos and the report</td><td class="local">Your device only</td></tr>
+          <tr><td>Notifications</td><td>Local cube crushing reminders that you turn on</td><td class="local">Your device only</td></tr>
+          <tr><td>Sharing and backups</td><td>When you choose to share a report or export a backup</td><td>The place you choose</td></tr>
+          <tr><td>Advertising</td><td>While you use the app</td><td>Google AdMob</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2>Data stored on your device</h2>
+    <p>Everything you enter in the app is stored in your device storage: test values, saved reports, project and sample names, photos, location coordinates if you add them, and your settings.</p>
+    <p>The app does not need an account and does not send this data to any server, ours or anyone else's. We cannot see or access it.</p>
+  </section>
+
+  <section>
+    <h2>Permissions the app requests</h2>
+    <h3>Camera</h3>
+    <p>Requested when you tap the camera button inside a report to add sample photos. Photos are stored on your device as part of the report and are not uploaded anywhere.</p>
+    <h3>Location</h3>
+    <p>Requested only when you tap the location button, to stamp coordinates on sample photos and the report. The app does not track your location in the background, and it keeps the location only inside the report you added it to.</p>
+    <h3>Notifications</h3>
+    <p>Used to remind you of cube crushing dates 7 and 28 days after placing, if you turn reminders on. These are local notifications scheduled by your device, with no server sending them.</p>
+    <p>You can withdraw any permission at any time from your device settings. The app keeps working, and only the feature that needs that permission stops.</p>
+  </section>
+
+  <section>
+    <h2>Advertising (Google AdMob)</h2>
+    <p>The app shows ads from Google AdMob. This service may collect your device advertising ID, IP address, device and operating system information, and your interactions with ads, to serve, measure and personalize ads.</p>
+    <p>This data is subject to Google's privacy policy. You can read <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data from apps that use its services</a>.</p>
+    <p>You can reset or delete your advertising ID in your device settings, under Google and then Ads.</p>
+  </section>
+
+  <section>
+    <h2>Google Play services</h2>
+    <p>The app uses Google Play services to tell you when an update is available and install it, and to show the app rating dialog. These run through Google Play directly and are subject to Google's privacy policy.</p>
+  </section>
+
+  <section>
+    <h2>Sharing and backups</h2>
+    <p>When you choose to share a report or export a backup, the file or text goes to the app or service you choose, such as WhatsApp, Google Drive or email. From then on, that service's policy applies.</p>
+    <p>The QR code printed on reports contains a summary of the report written inside the code itself, such as the reference number, date, result, test name and project. This data is not stored on any server.</p>
+    <p>The backup file is an unencrypted text file containing your reports and photos. Keep it in a safe place.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <ul>
+      <li>Delete any report from the results log inside the app.</li>
+      <li>Clear all app data from your device settings, or uninstall the app, to delete everything stored on it.</li>
+      <li>Backups you exported stay where you saved them, and you delete them yourself.</li>
+    </ul>
+    <p>Because we keep no data about you, there is no data on our side to delete for you. Advertising data is managed by Google through your account and device settings.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>The app is made for engineers and technicians and is not directed to children under 13. We do not knowingly collect any data from children.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>When this policy changes, we update the date at the top of the page. Important changes are also mentioned in the app release notes on Google Play.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>For any question about this policy or your data:</p>
+      <p>WhatsApp or phone: <a href="https://wa.me/201149219701" rel="noopener">+20 114 921 9701</a></p>
+    </div>
+  </section>
+</main>
+
+<script>
+  // التبديل بين اللغتين، ورابط مباشر للإنجليزي بإضافة #en في آخر الرابط
+  (function () {
+    var ar = document.getElementById('ar'), en = document.getElementById('en');
+    function show(lang) {
+      var isEn = lang === 'en';
+      ar.hidden = isEn; en.hidden = !isEn;
+      document.documentElement.lang = isEn ? 'en' : 'ar';
+      document.documentElement.dir = isEn ? 'ltr' : 'rtl';
+      document.title = isEn ? 'Privacy Policy | EngMat QC' : 'سياسة الخصوصية | EngMat QC';
+    }
+    document.querySelectorAll('.lang').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var to = b.getAttribute('data-to');
+        show(to);
+        try { history.replaceState(null, '', to === 'en' ? '#en' : location.pathname); } catch (e) {}
+        window.scrollTo(0, 0);
+      });
+    });
+    show(location.hash === '#en' ? 'en' : 'ar');
+  })();
+</script>
+</body>
+</html>
